@@ -20,12 +20,8 @@ function App() {
 		console.log(item);
 	};
 
-	const removeItem = (removedItem) => {
-		const newCart = cart.filter(item => {
-			if (item.id !== removedItem.id){
-				return item;
-			}
-		});
+	const removeItem = id => {
+		const newCart = cart.filter(item => item.id !== id);
 		setCart(newCart);
 	}
 
